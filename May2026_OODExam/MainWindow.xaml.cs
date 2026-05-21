@@ -44,7 +44,18 @@ namespace May2026_OODExam
 
         private void AddTrainingSessionButton_Click(object sender, RoutedEventArgs e)
         {
+            // open new window to add a training session for the selected member
+            AddTrainingSessionButton.IsEnabled = true;
 
+             if (lbxMembers.SelectedItem is Models.Member selectedMember)
+            {
+                AddNewSession addSessionWindow = new AddNewSession(selectedMember);
+                addSessionWindow.ShowDialog();
+
+                // refresh the training sessions list after adding a new session
+                var trainingSessions = db.TrainingSessions.Where(ts => ts.MemberId == selectedMember.MemberId).ToList();
+                TrainingSessionsListBox.ItemsSource = trainingSessions;
+            }
         }
 
         private void lbxMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
