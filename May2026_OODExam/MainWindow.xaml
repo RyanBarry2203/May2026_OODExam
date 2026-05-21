@@ -29,23 +29,23 @@
         <ListBox x:Name="TrainingSessionsListBox" Grid.Row="2" Grid.Column="1" Margin="10,158,70,10" Grid.RowSpan="2"/>
 
         <Label Grid.Column="1" Grid.Row="2" Content="ID : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,19,0,0" />
-        <TextBlock x:Name="IDTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="51,23,0,0" Width="67" />
+        <TextBox x:Name="IDTextBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="51,23,0,0" Width="67" />
 
         <Label Grid.Column="1" Grid.Row="2" Content="Contact Number : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,61,0,0" />
-        <TextBlock x:Name="ContactNumberTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,65,0,0" Width="67" />
+        <TextBox x:Name="ContactNumberTextBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,65,0,0" Width="67" />
 
         <Label Grid.Column="1" Grid.Row="2" Content="First Name : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,19,0,0" />
-        <TextBlock x:Name="FirstNameTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="263,23,0,0" Width="88" />
+        <TextBox x:Name="FirstNameTextBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="263,23,0,0" Width="88" />
 
         <Label Grid.Column="1" Grid.Row="2" Content="Last Name : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="356,19,0,0" />
-        <TextBlock x:Name="LastNameTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,23,0,0" Width="88" />
+        <TextBox x:Name="LastNameTextBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,23,0,0" Width="88" />
 
         <Label Grid.Column="1" Grid.Row="2" Content="Membership Type : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,61,0,0" />
-        <TextBlock x:Name="MembershipTypeTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="296,65,0,0" Width="70" />
+        <TextBox x:Name="MembershipTypeTextBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="296,65,0,0" Width="70" />
 
         <DatePicker x:Name="DateOfBirthDatePicker" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="393,65,0,0" Width="120"/>
 
-        <ListBox x:Name="SampleListBox" Grid.Row="2" Grid.Column="0" Margin="10"/>
+        <ListBox x:Name="lbxMembers" Grid.Row="2" Grid.Column="0" Margin="10" SelectionChanged="lbxMembers_SelectionChanged"/>
 
     </Grid>
 </Window>

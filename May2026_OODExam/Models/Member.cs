@@ -29,7 +29,7 @@ namespace May2026_OODExam.Models
 
         public override string ToString()
         {
-            return $"{FirstName} {Surname} - {MembershipType}";
+            return $"{Surname} {FirstName} - {ContactNumber}";
         }
     }
 }

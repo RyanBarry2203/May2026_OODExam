@@ -9,10 +9,11 @@ using System.Data.Entity;
 
 namespace DataManager
 {
+    // couldnt get database up and running for some reason, never happened before so i had to continue without being able to test anything
     internal class Program
     {
         static void Main(string[] args)
-        {     
+        {
             ClubData db = new ClubData();
 
             using (db)
@@ -24,8 +25,7 @@ namespace DataManager
                     Surname = "Doe",
                     DateOfBirth = new DateTime(1990, 1, 1),
                     ContactNumber = "1234567890",
-                    MembershipType = "Gold",
-                    TrainingSessions = new List<TrainingSession>()
+                    MembershipType = "Gold"
 
                 };
 
@@ -46,7 +46,7 @@ namespace DataManager
                     DurationMinutes = 60,
                     CoachNotes = "Pool A",
                     MemberId = member1.MemberId,
-                    Member = member1
+                    //Member = member1
                 };
 
                 // add the training session to the database
@@ -57,8 +57,49 @@ namespace DataManager
                 db.SaveChanges();
                 Console.WriteLine("Saved Session1 to db");
 
+                //using (db)
+                //{
+                //    //create a new movie
+                //    var m1 = new Member
+                //    {
+                //        FirstName = "Joe",
+                //        Surname = "The Simpleton",
+                //        DateOfBirth = new DateTime(2026, 05, 20),
+                //        ContactNumber = "1234567",
+                //        MembershipType = "Elite 2"
+                //    };
+
+                //    //add the movie to the database
+                //    db.Members.Add(m1);
+                //    Console.WriteLine($"Added Member");
+
+                //    //save the changes to the database
+                //    db.SaveChanges();
+                //    Console.WriteLine($"Saved changes to db");
+
+                //    //create a new booking for the movie
+                //    var t1 = new TrainingSession
+                //     {
+                //         SessionType = "Morning Swim",
+                //         SessionDate = new DateTime(2026, 05, 20),
+                //         DurationMinutes = 60,
+                //         CoachNotes = "Pool A",
+                //         MemberId = m1.MemberId,
+                //         //Member = m1
+                //     };
+
+                //    //add the booking to the database
+                //    db.TrainingSessions.Add(t1);
+                //    Console.WriteLine($"Added new Session");
+
+                //    //save the changes to the database
+                //    db.SaveChanges();
+                //    Console.WriteLine($"Saved changes to db");
+                //}
+
 
             }
         }
+        
     }
 }
