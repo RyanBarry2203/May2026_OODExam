@@ -24,5 +24,10 @@ namespace May2026_OODExam
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
