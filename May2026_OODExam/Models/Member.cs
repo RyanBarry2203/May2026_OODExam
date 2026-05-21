@@ -22,7 +22,7 @@ namespace May2026_OODExam.Models
         // constructor for Member class
         public Member()
         {
-            
+            TrainingSessions = new List<TrainingSession>();
         }
 
         // methods for Member class
