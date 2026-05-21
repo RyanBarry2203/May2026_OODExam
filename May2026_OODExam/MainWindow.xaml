@@ -21,8 +21,29 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="1" Grid.Column="0" Content="Members" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="1" Grid.Column="1" Content="Result" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Members" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,15,0,0" FontWeight="Bold"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Member Details" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Margin="24,15,0,0"/>
+
+        <Label Grid.Row="2" Grid.Column="1" Content="Training sessions" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,0,0"/>
+        <Button x:Name="AddTrainingSessionButton" Grid.Row="2" Grid.Column="1" Content="Add Training Session" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,118,0,0" Click="AddTrainingSessionButton_Click" Height="30" Width="172"/>
+        <ListBox x:Name="TrainingSessionsListBox" Grid.Row="2" Grid.Column="1" Margin="10,158,70,10" Grid.RowSpan="2"/>
+
+        <Label Grid.Column="1" Grid.Row="2" Content="ID : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,19,0,0" />
+        <TextBlock x:Name="IDTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="51,23,0,0" Width="67" />
+
+        <Label Grid.Column="1" Grid.Row="2" Content="Contact Number : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,61,0,0" />
+        <TextBlock x:Name="ContactNumberTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,65,0,0" Width="67" />
+
+        <Label Grid.Column="1" Grid.Row="2" Content="First Name : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,19,0,0" />
+        <TextBlock x:Name="FirstNameTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="263,23,0,0" Width="88" />
+
+        <Label Grid.Column="1" Grid.Row="2" Content="Last Name : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="356,19,0,0" />
+        <TextBlock x:Name="LastNameTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,23,0,0" Width="88" />
+
+        <Label Grid.Column="1" Grid.Row="2" Content="Membership Type : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,61,0,0" />
+        <TextBlock x:Name="MembershipTypeTextBlock" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="296,65,0,0" Width="70" />
+
+        <DatePicker x:Name="DateOfBirthDatePicker" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="393,65,0,0" Width="120"/>
 
         <ListBox x:Name="SampleListBox" Grid.Row="2" Grid.Column="0" Margin="10"/>
 
