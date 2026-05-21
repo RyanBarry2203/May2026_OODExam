@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace DataManager
 {
-    // couldnt get database up and running for some reason, never happened before so i had to continue without being able to test anything
+    // couldnt get database up and running for some reason, never happened before so i had to continue without being able to test anything, i have added the code to add data to the database but i have not been able to test it, i have also added some console writelines to show where the code is up to but again i have not been able to test it so it may not work as intended
     internal class Program
     {
         static void Main(string[] args)
