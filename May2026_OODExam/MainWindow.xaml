@@ -26,7 +26,20 @@
 
         <Label Grid.Row="2" Grid.Column="1" Content="Training sessions" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,0,0"/>
         <Button x:Name="AddTrainingSessionButton" Grid.Row="2" Grid.Column="1" Content="Add Training Session" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,118,0,0" Click="AddTrainingSessionButton_Click" Height="30" Width="172"/>
-        <ListBox x:Name="TrainingSessionsListBox" Grid.Row="2" Grid.Column="1" Margin="10,158,70,10" Grid.RowSpan="2"/>
+        <ListBox Grid.Column="1" Grid.Row="2" Name="lbxMovies" Margin="10,153,10,10" SelectionChanged="lbxMovies_SelectionChanged" Grid.RowSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding SessionDate}" FontWeight="Bold" FontSize="14"/>
+                            <TextBlock Text="{Binding SessionType}" FontStyle="Italic" VerticalAlignment="Bottom" FontSize="12"/>
+                            <TextBlock Text="{Binding DurationMinutes}" FontStyle="Italic" VerticalAlignment="Bottom" FontSize="10"/>
+                            <TextBlock Text="{Binding CoachNotes}" VerticalAlignment="Bottom" FontSize="10"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <Label Grid.Column="1" Grid.Row="2" Content="ID : " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,19,0,0" />
         <TextBox x:Name="IDTextBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="51,23,0,0" Width="67" />
